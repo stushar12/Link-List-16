@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
-#include<string.h>        //reverse in group of k nodes
+#include<string.h>        //rotate the group of nodes around k
 struct node
 {
   int data;
@@ -39,12 +39,11 @@ return q;
 }
 struct node *reverse(struct node *p,int k)
 {
-  struct node *q=p,*r,*s,*t,*temp;
+  struct node *q=p,*r,*t,*temp;
   for(int i=1;i<k-1;i++)
   {
     p=p->next;
   }
-  s=p;
   t=p->next;
   r=p->next->next;
   temp=r;
